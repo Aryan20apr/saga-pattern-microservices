@@ -70,7 +70,7 @@ Run services `api-gateway`, `order-service`, `customer-service`, `inventory-serv
 | Inventory service | localhost:9093 |
 
 
-> Note: services now register to Consul using their IP address (`prefer-ip-address=true`) instead of a fixed hostname. This avoids `localhost`/`host.docker.internal` mismatches across Docker, host OS, and WSL setups.
+> Note: service discovery now defaults to `localhost` for local development. If you run services in Docker and need a different address, set `SERVICE_HOSTNAME` before starting each service (for example `export SERVICE_HOSTNAME=host.docker.internal`).
 
 ### Start outbox connectors
 

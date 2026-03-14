@@ -22,7 +22,8 @@ spring:
       host: ${CONSUL_HOST:localhost}
       port: ${CONSUL_PORT:8500}
       discovery:
-        prefer-ip-address: true
+        prefer-ip-address: false
+        hostname: ${SERVICE_HOSTNAME:localhost}
     function:
       definition: handleReserveProductStockRequest
     stream:
