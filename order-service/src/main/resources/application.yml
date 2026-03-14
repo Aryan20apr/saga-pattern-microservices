@@ -23,7 +23,7 @@ spring:
       port: ${CONSUL_PORT:8500}
       discovery:
         prefer-ip-address: false
-        hostname: host.docker.internal
+        hostname: ${SERVICE_HOSTNAME:localhost}
     function:
       definition: reserveCustomerBalanceStage;reserveProductStockStage
     stream:
